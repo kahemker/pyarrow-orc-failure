@@ -20,3 +20,11 @@ Traceback (most recent call last):
   File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
 pyarrow.lib.ArrowException: Unknown error: Time zone file /usr/share/zoneinfo/GMT does not exist. Please install IANA time zone database and set TZDIR env.
 ```
+
+You can witness this code work by creating a conda environment.
+
+1. conda env create -f environment.yml
+2. conda activate test_pyarrow_conda
+3. python main.py
+
+The code will terminate successfully and the `test.orc.snappy` file will exist in the directory.
